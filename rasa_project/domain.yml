@@ -1,0 +1,84 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- what_do_you_have
+- vegetarian
+- non_veg
+- order_name_veg
+- order_name_non_veg
+- select_restaurant
+- name_entry
+- country_entry
+- show_name_country_leader
+entities:
+- theme
+- name
+- country
+slots:
+  country:
+    type: text
+  leader:
+    type: text
+  name:
+    type: text
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_botgreet:
+  - text: how can i help you sir?
+  utter_veg_non_veg:
+  - text: would you prefer veg or non veg?
+  utter_veg:
+  - text: we have salad. Want one?
+  utter_non_veg:
+  - text: We have chicked, meat, eggs!
+  utter_anythingelse:
+  - text: Is there anything else we can help you with sir/maam?
+  utter_thanks:
+  - text: Thanks. We will get your order shortly.
+  utter_selected_restaurant:
+  - text: Thank you for selecting this restaurant
+  utter_entry_country:
+  - text: '{name} , please enter your country name'
+  utter_show_country:
+  - text: '{name} belongs to {country}'
+  utter_show_name_country_leader:
+  - text: '{name} is from {country} whose leader is {leader}'
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_botgreet
+- utter_veg_non_veg
+- utter_veg
+- utter_non_veg
+- utter_anythingelse
+- utter_thanks
+- utter_selected_restaurant
+- action_selected_restaurant
+- utter_entry_country
+- utter_show_country
+- action_show_leader
+- utter_show_name_country_leader
